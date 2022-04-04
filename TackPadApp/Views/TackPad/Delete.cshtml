@@ -1,0 +1,26 @@
+﻿@model TackPad
+
+<form method="post" asp-action="Delete">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Note</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Title"></label>
+            <input type="text" asp-for="Title" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Note"></label>
+            <input type="text" asp-for="Note" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Status"></label>
+            <input type="number" asp-for="Status" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+        <a asp-controller="TackPad" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
+    </div>
+</form>
