@@ -9,14 +9,17 @@
         <div class="mb-3">
             <label asp-for="Title"></label>
             <input type="text" asp-for="Title" class="form-control"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Note"></label>
             <input type="text" asp-for="Note" class="form-control"/>
+            <span asp-validation-for="Note" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Status"></label>
             <input type="number" asp-for="Status" class="form-control"/>
+            <span asp-validation-for="Status" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="TackPad" asp-action="Index" class="btn btn-secondary" style="width:150px">
