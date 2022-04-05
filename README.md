@@ -38,3 +38,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 Last time I created an app called "TackPad" with PHP MVC. But this time I decided to build the exact same app with asp.net core mvc.
+
+<!-- INSTALLATION -->
+## Installation Guide
+1. At first you need to install git on your local computer. For that you need to go to this [website](https://git-scm.com/downloads).
+2. Go to your windows explorer and search for a good place for storing this project
+3. Now right click on your folder or place and then click on "Git Bash Here"
+4. Finally you will see something opened up like the windows command prompt. If you do you only have to enter this
+   ```sh
+   git clone http://192.168.100.57:3000/Olivier_Luethy/TackPad.git
+   ```
+5. When you success cloned the project, you need to have a lokal database. I used [XAMPP](https://www.apachefriends.org/de/index.html). If you want to use it too, then please make sure you download the latest version of it. Otherwise it doesn't mite work as expected.
+
+<!-- Websites that helped me a lot -->
+## Websites which were helping me a lot
+Link: https://www.learnentityframeworkcore.com/configuration/one-to-many-relationship-configuration
+Link: https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
+Link: https://www.learnentityframeworkcore.com/configuration/one-to-one-relationship-configuration
+Link: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-6.0&tabs=visual-studio
