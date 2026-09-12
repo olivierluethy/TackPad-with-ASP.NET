@@ -1,58 +1,50 @@
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="http://192.168.100.57:3000/Olivier_Luethy/TackPad.git">
-    <img src="images/favicon.ico" alt="Logo" width="80" height="80">
-  </a>
+# TackPad (ASP.NET Core MVC)
 
-  <h3 align="center">TackPad</h3>
-  <h4 align="center">A notes app made with ASP.NET Core MVC</h4>
+A simple notes / to-do web app built with ASP.NET Core MVC and Entity Framework Core.
+It's a re-implementation of an earlier PHP MVC version of the same app, rebuilt on
+.NET 6.
 
-  <p align="center">
-    Here I'll explain you how I developed the notes app called TackPad.
-    <br />
-    <a href="http://192.168.100.57:3000/Olivier_Luethy/TackPad-with-ASP.NET.git/README.md"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="http://192.168.100.57:3000/Olivier_Luethy/TackPad-with-ASP.NET.git">View Demo</a>
-    ·
-    <a href="http://192.168.100.57:3000/Olivier_Luethy/TackPad-with-ASP.NET.git/issues">Report Bug</a>
-    ·
-    <a href="http://192.168.100.57:3000/Olivier_Luethy/TackPad-with-ASP.NET.git/issues">Request Feature</a>
-  </p>
-</p>
+## Features
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#installation-guide">Installation Guide</a>
-    </li>
-  </ol>
-</details>
+- Create, edit and delete notes (each with a title, note text, status and a
+  "complete by" date).
+- Notes persisted to SQL Server via Entity Framework Core (code-first migrations).
+- Server-rendered Razor views with the standard MVC structure.
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-Last time I created an app called "TackPad" with PHP MVC. But this time I decided to build the exact same app with asp.net core mvc.
+## Tech
 
-<!-- INSTALLATION -->
-## Installation Guide
-1. At first you need to install git on your local computer. For that you need to go to this [website](https://git-scm.com/downloads).
-2. Go to your windows explorer and search for a good place for storing this project
-3. Now right click on your folder or place and then click on "Git Bash Here"
-4. Finally you will see something opened up like the windows command prompt. If you do you only have to enter this
-   ```sh
-   git clone http://192.168.100.57:3000/Olivier_Luethy/TackPad.git
-   ```
-5. When you success cloned the project, you need to have a lokal database. I used [XAMPP](https://www.apachefriends.org/de/index.html). If you want to use it too, then please make sure you download the latest version of it. Otherwise it doesn't mite work as expected.
+- C# / ASP.NET Core MVC (.NET 6)
+- Entity Framework Core 6 with SQL Server (LocalDB by default)
+- Razor views, Bootstrap-based layout
 
-<!-- Websites that helped me a lot -->
-## Websites which were helping me a lot
-Link: https://www.learnentityframeworkcore.com/configuration/one-to-many-relationship-configuration
-Link: https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
-Link: https://www.learnentityframeworkcore.com/configuration/one-to-one-relationship-configuration
-Link: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-6.0&tabs=visual-studio
+## Getting started
+
+### Prerequisites
+
+- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+- SQL Server — the default connection string uses **SQL Server LocalDB**
+- Optional: the EF Core CLI tool (`dotnet tool install --global dotnet-ef`)
+
+### Clone
+
+```sh
+git clone https://github.com/olivierluethy/TackPad-with-ASP.NET.git
+cd TackPad-with-ASP.NET/TackPadApp
+```
+
+### Configure the database
+
+The connection string lives in `appsettings.json` under
+`ConnectionStrings:DefaultConnection` and points at a local LocalDB instance by default.
+Adjust it if you use a different SQL Server instance.
+
+### Create the database and run
+
+```sh
+dotnet ef database update
+dotnet run
+```
+
+The app is then reachable at the address shown in the console (see
+`Properties/launchSettings.json`). Alternatively, open `TackPadApp.sln` in Visual Studio
+and press **F5**.
